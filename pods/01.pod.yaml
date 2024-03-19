@@ -14,12 +14,12 @@ spec:
       imagePullPolicy: IfNotPresent
       ports: 
         -  containerPort: 80
-  resources:
-    requests:   # this is the soft limit
-       memory: "64Mi"
-       cpu: "250m"
-    limits:     # this is the hard limit
-       memory: "128Mi"
-       cpu: "500m"
-      
+      resources:
+        requests:   # this is the soft limit
+            memory: "64Mi"
+            cpu: "250m"
+        limits:     # this is the hard limit
+            memory: "128Mi"
+            cpu: "500m"
+    
  
