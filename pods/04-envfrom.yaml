@@ -1,0 +1,25 @@
+---
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: justcheck
+  labels:
+    app: myapp
+    tier: "froentend"
+    env: prod
+spec:
+  containers:
+    - name: myapp
+      image: nginx
+      ports: 
+      - containerPort: 80
+      resources:
+         requests:   # this is the soft limit
+            memory: "64Mi"
+            cpu: "250m"
+         limits:     # this is the hard limit
+            memory: "128Mi"
+            cpu: "500m"
+      envFrom:
+        - configMapRef:
+            name: myconfig-demo
