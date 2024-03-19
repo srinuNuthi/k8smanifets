@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: myconfig-demo
+  labels:
+    app: configapp
+    tier: checking
+data:
+  DEMO_GREETING: "Hello from the environment"
+  DEMO_FAREWELL: "Such a sweet sorrow"
+  DEMO_CHECK: " naku enti raa e gola"
