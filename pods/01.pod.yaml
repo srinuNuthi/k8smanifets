@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Pod
 metadata: 
-  name: Corrected
+  name: corrected
   labels:
     name: myweb
     env: dev
