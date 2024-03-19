@@ -12,5 +12,13 @@ spec:
     - name: mycontainer
       image: nginx
       imagePullPolicy: IfNotPresent
-      ports: 
+  resources:
+    requests:   # this is the soft limit
+       memory: "64Mi"
+       cpu: "250m"
+    limits:     # this is the hard limit
+       memory: "128Mi"
+       cpu: "500m"
+       ports: 
         - containerPort: 80
+ 
