@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Pod
+metadata: 
+  namespace: learn
+  labels:
+    name: myweb
+    env: dev
+    tier: froentend
+spec:
+  containers:
+    - name: mycontainer
+      image: nginx
+      imagePullPolicy: IfNotPresent
+      ports: 
+        - containerPort: 80
