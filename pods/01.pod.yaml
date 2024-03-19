@@ -6,7 +6,7 @@ metadata:
   labels:
     name: myweb
     env: dev
-    tier: froentend
+    tier: frontend  # Corrected from "froentend" to "frontend"
 spec:
   containers:
     - name: mycontainer
