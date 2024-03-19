@@ -8,4 +8,4 @@ metadata:
 data:
   DEMO_GREETING: "Hello from the environment"
   DEMO_FAREWELL: "Such a sweet sorrow"
-  DEMO_CHECK: " naku enti raa e gola"
+  DEMO_CHECK: "now i am changing the summary"
