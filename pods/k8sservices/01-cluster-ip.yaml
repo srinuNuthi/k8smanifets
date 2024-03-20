@@ -4,9 +4,9 @@ kind: Pod
 metadata: 
   name: myclusterpod
   labels:
-    name: myweb
-    env: dev
-    tier: frontend
+    name: myapp
+    env: prod
+    tier: backend
 spec:
   containers:
     - name: mycontainer
@@ -30,9 +30,9 @@ metadata:
   name: my-clusterip
 spec:
   selector:
-    name: myweb
-    env: dev
-    tier: frontend
+   name: myapp
+   env: prod
+   tier: backend
   type: ClusterIP
   ports: 
     - port: 80
