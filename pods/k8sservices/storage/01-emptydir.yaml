@@ -7,14 +7,17 @@ spec:
   - image: alpine
     imagePullPolicy: IfNotPresent
     name: alpine-container
-    command: [ 'sh', '-c', 'echo The Bench Container 1 is Running ; sleep 3600']
+    command: ['sh', '-c', 'echo The Bench Container 1 is Running; sleep 3600']
+    volumeMounts:
+    - mountPath: /demo
+      name: demo-volume  # This must match the name of the volume defined in the volumes section
 
   - image: nginx
     imagePullPolicy: IfNotPresent
     name: nginx-container
     volumeMounts:
     - mountPath: /demo
-      name: demo-volume
+      name: demo-volume  # Mount the same volume here as well
   volumes:
   - name: demo-volume
     emptyDir: {}
